@@ -1,0 +1,18 @@
+.website-grid {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 1fr 200px;
+}
+
+.navbar {
+    background: red;
+}
+
+.main-content {
+    background: pink;
+}
+
+.footer {
+    background: yellow;
+}

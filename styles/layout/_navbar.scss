@@ -1,0 +1,84 @@
+.navbar {
+    @include flexCenter();
+    padding: 2rem;
+}
+
+.navbar-content--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $max-width;
+    position: relative;
+
+    // outline: solid black 1px;
+    @include mobileSize {
+        flex-wrap: wrap;
+    }
+
+    > .logo {
+        width: max-content;
+
+        .img-logo {
+            width: max-content;
+        }
+    }
+
+    > .hamburger--wrap {
+        display: none;
+        @include mobileSize {
+            display: block;
+        }
+
+        .hamburger {
+            width: max-content;
+        }
+    }
+
+    > .links--wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+        @include mobileSize {
+            padding: 3rem;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            bottom: 0;
+            background: blue;
+
+            &.display {
+                display: flex;
+            }
+        }
+
+        .link + .link {
+            margin-left: 3rem;
+
+            @include mobileSize {
+                margin-left: 0;
+                margin-top: 3rem;
+            }
+        }
+
+        .link {
+            &.-plansLink {
+                border: solid black 2px;
+                padding: 0.75rem 2.5rem;
+                @include mobileSize {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            a {
+                color: black;
+            }
+        }
+    }
+}
