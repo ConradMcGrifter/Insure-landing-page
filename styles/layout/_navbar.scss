@@ -1,6 +1,8 @@
 .navbar {
     @include flexCenter();
     padding: 2rem;
+    position: relative;
+    z-index: 999;
 }
 
 .navbar-content--wrap {
@@ -11,7 +13,6 @@
     max-width: $max-width;
     position: relative;
 
-    // outline: solid black 1px;
     @include mobileSize {
         flex-wrap: wrap;
     }
@@ -32,6 +33,7 @@
 
         .hamburger {
             width: max-content;
+            cursor: pointer;
         }
     }
 
@@ -46,18 +48,21 @@
             display: none;
             flex-direction: column;
             justify-content: flex-start;
+            text-align: center;
             position: fixed;
-            top: 80px;
+            top: 8rem;
             left: 0;
             bottom: 0;
-            background: blue;
+            background: url("../images/bg-pattern-mobile-nav.svg") no-repeat bottom,
+                color(neutral-very-dark-violet);
+            background-size: contain;
 
             &.display {
                 display: flex;
             }
         }
 
-        .link + .link {
+        li + li {
             margin-left: 3rem;
 
             @include mobileSize {
@@ -66,18 +71,24 @@
             }
         }
 
-        .link {
-            &.-plansLink {
-                border: solid black 2px;
-                padding: 0.75rem 2.5rem;
-                @include mobileSize {
-                    width: 100%;
-                    text-align: center;
-                }
+        li {
+            @include mobileSize {
+                width: 100%;
             }
+        }
 
-            a {
-                color: black;
+        .view-plans-link {
+            display: block;
+            @include mobileSize {
+                color: white;
+                border-color: white;
+            }
+        }
+
+        .link {
+            color: black;
+            @include mobileSize {
+                color: white;
             }
         }
     }

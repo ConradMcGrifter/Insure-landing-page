@@ -17,6 +17,10 @@ body {
     font-size: 1.6rem;
     font-family: "Karla", sans-serif;
     background: color(primary-dark-violet);
+
+    &.noScroll {
+        overflow: hidden;
+    }
 }
 
 h1,
