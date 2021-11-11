@@ -31,19 +31,35 @@
             <!--🔻 main content 🔻-->
             <main class="main-content">
                 <section class="hero-section">
+                    <!-- 🔻this is the large dark colored rectangle in the background of the hero section -->
                     <div class="backgroundPiece"></div>
+                    <!-- 🔻hero section right side background pattern -->
                     <img
                         src="images/bg-pattern-intro-right-desktop.svg"
                         alt=""
                         class="bg-pattern-right-desktop"
                     />
+                    <!-- 🔻hero section left side background pattern -->
                     <img
                         src="images/bg-pattern-intro-left-desktop.svg"
                         alt=""
                         class="bg-pattern-left-desktop"
                     />
+                    <!-- 🔻 hero section content 🔻-->
                     <div class="hero-content--wrap">
                         <div class="hero-text--wrap">
+                            <!-- 🔻top left bg pattern mobile -->
+                            <img
+                                src="images/bg-pattern-intro-left-mobile.svg"
+                                alt=""
+                                class="bg-pattern-left-mobile"
+                            />
+                            <!-- 🔻bottom right bg pattern mobile -->
+                            <img
+                                src="images/bg-pattern-intro-right-mobile.svg"
+                                alt=""
+                                class="bg-pattern-right-mobile"
+                            />
                             <h1 class="heroTitle">Humanizing your insurance.</h1>
                             <p class="heroParagraph">
                                 Get your life insurance coverage easier and faster. We blend our
@@ -53,7 +69,45 @@
                             <a class="view-plans-link -white" href="#!">VIEW PLANS</a>
                         </div>
                         <div class="hero-img--wrap">
-                            <img src="images/image-intro-desktop.jpg" alt="" />
+                            <picture class="img">
+                                <source
+                                    srcset="images/image-intro-mobile.jpg"
+                                    media="(max-width: 550px)"
+                                />
+                                <img src="images/image-intro-desktop.jpg" alt="" />
+                            </picture>
+                        </div>
+                    </div>
+                </section>
+                <!--🔻 info section (three columns) 🔻-->
+                <section class="info-section">
+                    <div class="info-content--wrap">
+                        <h2 class="infoTitle">We're different</h2>
+                        <div class="three-columns--wrap">
+                            <div class="column">
+                                <img src="images/icon-snappy-process.svg" alt="" class="icon" />
+                                <h3 class="columnTitle">Snappy Process</h3>
+                                <p class="infoParagraph">
+                                    Our application process can be completed in minutes, not hours.
+                                    Don’t get stuck filling in tedious forms.
+                                </p>
+                            </div>
+                            <div class="column">
+                                <img src="images/icon-affordable-prices.svg" alt="" class="icon" />
+                                <h3 class="columnTitle">Affordable Prices</h3>
+                                <p class="infoParagraph">
+                                    We don’t want you worrying about high monthly costs. Our prices
+                                    may be low, but we still offer the best coverage possible.
+                                </p>
+                            </div>
+                            <div class="column">
+                                <img src="images/icon-people-first.svg" alt="" class="icon" />
+                                <h3 class="columnTitle">People First</h3>
+                                <p class="infoParagraph">
+                                    Our plans aren’t full of conditions and clauses to prevent
+                                    payouts. We make sure you’re covered when you need it.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -77,18 +131,15 @@
 
   Snappy Process
 
-  Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
+
 
   Affordable Prices
 
-  We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
+  
 
   People First
 
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
+  
 
   Find out more about how we work
 

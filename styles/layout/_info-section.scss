@@ -1,0 +1,40 @@
+.info-section {
+    display: flex;
+}
+
+.info-content--wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: $max-width;
+    padding: 10rem 2rem;
+
+    .infoTitle {
+        font-size: clamp(4rem, 5vw, 7rem);
+    }
+
+    > .three-columns--wrap {
+        display: flex;
+        margin-top: 8rem;
+
+        > .column {
+            .icon {
+                max-width: max-content;
+                margin-bottom: 3rem;
+            }
+            .columnTitle {
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+            }
+            .infoParagraph {
+                line-height: 1.6;
+                font-size: 1.6rem;
+                max-width: 37ch;
+            }
+
+            & + .column {
+                margin-left: 4rem;
+            }
+        }
+    }
+}
